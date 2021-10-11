@@ -25,7 +25,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link to='#!' onClick={onLogoutClick}>
-          <i className='fas fa-sign-out-alt' /> <span className='hide-sm'>Log Out</span>
+          <i className='fas fa-sign-out-alt' /> <span className='hide-sm'>Sign Out</span>
         </Link>
       </li>
     </ul>

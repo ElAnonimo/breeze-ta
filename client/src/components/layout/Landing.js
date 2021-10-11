@@ -23,7 +23,7 @@ const Landing = () => {
 
   const authLinks = (
     <div className='buttons'>
-      <Link to='#!' className='btn btn-danger' onClick={onLogoutClick}>Log Out</Link>
+      <Link to='#!' className='btn btn-danger' onClick={onLogoutClick}>Sign Out</Link>
       <Link to='/entries' className='btn btn-light'>See Entries</Link>
     </div>
   );
