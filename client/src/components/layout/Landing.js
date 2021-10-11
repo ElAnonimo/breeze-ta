@@ -1,15 +1,16 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../actions/auth';
 
 const Landing = () => {
   const { isAuthenticated, loading } = useSelector(state => state.auth);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onLogoutClick = evt => {
     evt.preventDefault();
-    dispatch(logout());
+    dispatch(logout(history));
   };
 
   const guestLinks = (
@@ -35,7 +36,7 @@ const Landing = () => {
           <p className='lead'>
             Access the phone book entries to get connected or sign in to update/delete
           </p>
-          {!loading && <Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>}
+          {!loading && <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>}
         </div>
       </div>
     </section>
