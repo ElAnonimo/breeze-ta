@@ -12,7 +12,6 @@ const CreateEntry = () => {
       createEntry={createEntry}
     />
   );
-
 };
 
 export default CreateEntry;
