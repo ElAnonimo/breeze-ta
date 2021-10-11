@@ -6,7 +6,6 @@ import Alert from '../layout/Alert';
 import CreateEntry from '../entry-form/CreateEntry';
 import EditEntry from '../entry-form/EditEntry';
 import Entries from '../entries/Entries';
-import EntryItem from '../entries/EntryItem';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 
@@ -17,7 +16,6 @@ const Routes = () => (
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />
       <Route path='/entries' component={Entries} />
-      <Route path='/entry/:id' component={EntryItem} />
       <PrivateRoute path='/create-entry' component={CreateEntry} />
       <PrivateRoute path='/edit-entry/:id' component={EditEntry} />
       <Route component={NotFound} />
